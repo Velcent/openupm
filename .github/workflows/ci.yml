@@ -32,8 +32,8 @@ jobs:
       working-directory: tmp-openupm-next
     - name: build openupm-next validator
       run: |
-        npm run build --workspace @openupm/common
         npm run build --workspace @openupm/types
+        npm run build --workspace @openupm/common
         npm run build --workspace @openupm/local-data
       working-directory: tmp-openupm-next
     - name: npm test
