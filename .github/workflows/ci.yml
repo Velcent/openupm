@@ -14,6 +14,12 @@ jobs:
     name: Data validation
     steps:
     - uses: actions/checkout@v4
+    - name: checkout openupm-next validator source
+      uses: actions/checkout@v4
+      with:
+        repository: openupm/openupm-next
+        ref: main
+        path: tmp-openupm-next
     - name: set node.js 22
       uses: actions/setup-node@v3
       with:
@@ -21,8 +27,17 @@ jobs:
         cache: npm
     - name: npm install
       run: npm install
+    - name: npm install openupm-next
+      run: npm install
+      working-directory: tmp-openupm-next
+    - name: build openupm-next validator
+      run: |
+        npm run build --workspace @openupm/common
+        npm run build --workspace @openupm/types
+        npm run build --workspace @openupm/local-data
+      working-directory: tmp-openupm-next
     - name: npm test
-      run: npm test
+      run: OPENUPM_NEXT_PATH=tmp-openupm-next npm test
 
   build-website:
     runs-on: ubuntu-latest
