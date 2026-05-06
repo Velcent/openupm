@@ -31,10 +31,7 @@ jobs:
       run: npm install
       working-directory: tmp-openupm-next
     - name: build openupm-next validator
-      run: |
-        npm run build --workspace @openupm/types
-        npm run build --workspace @openupm/common
-        npm run build --workspace @openupm/local-data
+      run: npm run build -- --filter @openupm/local-data
       working-directory: tmp-openupm-next
     - name: npm test
       run: OPENUPM_NEXT_PATH=tmp-openupm-next npm test
