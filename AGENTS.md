@@ -17,6 +17,10 @@ This repository stores curated OpenUPM package data and the validation wrapper u
 
 The data test expects a built `openupm-next` checkout next to this repository at `../openupm-next`, or set `OPENUPM_NEXT_PATH=/path/to/openupm-next`. Build `openupm-next` before running validation locally.
 
+When searching, remember `rg` skips hidden paths by default. Use `rg --hidden ...` when hidden project directories need to be included.
+
+When staging the `openupm-next/apps/docs` dev server for browser testing, bind to `0.0.0.0` so LAN users can visit it.
+
 ## Coding Style & Naming Conventions
 
 Use JavaScript CommonJS style for tests and scripts, matching the existing `require(...)` pattern. Use two-space indentation in YAML package files and keep package keys in the established order where practical.
