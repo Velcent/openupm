@@ -13,6 +13,5 @@ hunter: favoyang
 gitTagPrefix: ''
 gitTagIgnore: ''
 minVersion: 1.0.0
-githubReleaseAssetName: com.example.signed-upm-
 readme: main:README.md
 createdAt: 1778150201000
