@@ -6,6 +6,8 @@ coverage/
 run
 dist
 .DS_Store
+.envrc
+.env.local
 .nyc_output
 .basement
 .log
