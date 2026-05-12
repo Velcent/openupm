@@ -1,0 +1,20 @@
+name: com.lemonity.provider.ultraleap
+displayName: Lemonity Provider - Ultraleap
+description: Ultraleap hand tracking provider for Lemonity.
+repoUrl: https://github.com/zorderjohn/lemonity
+trackingMode: git
+parentRepoUrl: null
+licenseSpdxId: Apache-2.0
+licenseName: Apache License 2.0
+image: >-
+  https://raw.githubusercontent.com/zorderjohn/lemonity/refs/heads/master/docs/images/com.lemonity.provider.ultraleap-cover.png
+topics:
+  - ar-and-vr
+  - input-management
+  - integration
+hunter: zorderjohn
+gitTagPrefix: ''
+gitTagIgnore: ''
+minVersion: ''
+readme: master:README.md
+createdAt: 1778597905902
